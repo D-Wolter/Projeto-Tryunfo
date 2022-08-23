@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default class Form extends Component {
   render() {
     const
-      { name,
+      { cardName,
         handleChange,
         description,
         attr1,
@@ -19,13 +19,13 @@ export default class Form extends Component {
     return (
       <form>
         <h1>Adicionar nova carta</h1>
-        <label htmlFor="name">
+        <label htmlFor="cardName">
           Nome
           <input
             type="text"
-            id="name"
-            name="name"
-            value={ name }
+            id="cardName"
+            name="cardName"
+            value={ cardName }
             data-testid="name-input"
             onChange={ handleChange }
           />
@@ -115,7 +115,7 @@ export default class Form extends Component {
           type="button"
           disabled={ isDisabled }
           onClick={
-            () => saveClick({ name, description, attr1, attr2, attr3, image, rare })
+            () => saveClick({ cardName, description, attr1, attr2, attr3, image, rare })
           }
         >
           Salvar
@@ -126,7 +126,7 @@ export default class Form extends Component {
 }
 
 Form.propTypes = {
-  name: PropTypes.string.isRequired,
+  cardName: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
   description: PropTypes.string.isRequired,
   attr1: PropTypes.string.isRequired,
