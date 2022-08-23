@@ -6,7 +6,7 @@ class App extends React.Component {
     super();
     this.state = {
       cardName: '',
-      description: '',
+      cardDescription: '',
       attr1: '0',
       attr2: '0',
       attr3: '0',
@@ -34,7 +34,7 @@ class App extends React.Component {
       data: [...prevState.data, objetoInfo],
       previewOn: true,
       cardName: '',
-      description: '',
+      cardDescription: '',
       attr1: '0',
       attr2: '0',
       attr3: '0',
@@ -46,7 +46,7 @@ class App extends React.Component {
   render() {
     const {
       cardName,
-      description,
+      cardDescription,
       attr1,
       attr2,
       attr3,
@@ -59,7 +59,7 @@ class App extends React.Component {
       <Form
         handleChange={ this.handleChange }
         cardName={ cardName }
-        description={ description }
+        cardDescription={ cardDescription }
         attr1={ attr1 }
         attr2={ attr2 }
         attr3={ attr3 }

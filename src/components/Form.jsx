@@ -6,7 +6,7 @@ export default class Form extends Component {
     const
       { cardName,
         handleChange,
-        description,
+        cardDescription,
         attr1,
         attr2,
         attr3,
@@ -30,15 +30,15 @@ export default class Form extends Component {
             onChange={ handleChange }
           />
         </label>
-        <label htmlFor="description">
+        <label htmlFor="cardDescription">
           Descrição
           <textarea
             data-testid="description-input"
-            name="description"
-            id="description"
+            name="cardDescription"
+            id="cardDescription"
             cols="30"
             rows="10"
-            value={ description }
+            value={ cardDescription }
             onChange={ handleChange }
           />
         </label>
@@ -128,7 +128,7 @@ export default class Form extends Component {
 Form.propTypes = {
   cardName: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
-  description: PropTypes.string.isRequired,
+  cardDescription: PropTypes.string.isRequired,
   attr1: PropTypes.string.isRequired,
   attr2: PropTypes.string.isRequired,
   attr3: PropTypes.string.isRequired,
