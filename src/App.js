@@ -13,6 +13,8 @@ class App extends React.Component {
       image: '',
       rare: '',
       agree: false,
+      data: [],
+      previewOn: false,
     };
   }
 
@@ -26,8 +28,24 @@ class App extends React.Component {
     });
   };
 
+  saveClick = (objetoInfo) => {
+    this.setState((prevState) => ({
+      data: [...prevState.data, objetoInfo],
+      previewOn: true,
+    }));
+  };
+
   render() {
-    const { name, description, attr1, attr2, attr3, image, rare, agree } = this.state;
+    const {
+      name,
+      description,
+      attr1,
+      attr2,
+      attr3,
+      image,
+      rare,
+      agree,
+      previewOn } = this.state;
     return (
       <Form
         handleChange={ this.handleChange }
@@ -39,6 +57,8 @@ class App extends React.Component {
         image={ image }
         rare={ rare }
         agree={ agree }
+        previewOn={ previewOn }
+        saveClick={ this.saveClick }
       />
     );
   }

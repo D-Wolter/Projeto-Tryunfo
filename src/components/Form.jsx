@@ -12,7 +12,9 @@ export default class Form extends Component {
         attr3,
         image,
         rare,
-        agree } = this.props;
+        agree,
+        saveClick,
+        isDisabled } = this.props;
 
     return (
       <form>
@@ -101,6 +103,16 @@ export default class Form extends Component {
             onChange={ handleChange }
           />
         </label>
+        <button
+          data-testid="save-button"
+          type="button"
+          disabled={ isDisabled }
+          onClick={
+            () => saveClick({ name, description, attr1, attr2, attr3, image, rare })
+          }
+        >
+          Salvar
+        </button>
       </form>
     );
   }
@@ -116,4 +128,6 @@ Form.propTypes = {
   image: PropTypes.string.isRequired,
   rare: PropTypes.string.isRequired,
   agree: PropTypes.bool.isRequired,
+  saveClick: PropTypes.func.isRequired,
+  isDisabled: PropTypes.bool.isRequired,
 };
