@@ -7,9 +7,9 @@ export default class Form extends Component {
       { cardName,
         handleChange,
         cardDescription,
-        attr1,
-        attr2,
-        attr3,
+        cardAttr1,
+        cardAttr2,
+        cardAttr3,
         image,
         rare,
         agree,
@@ -42,36 +42,36 @@ export default class Form extends Component {
             onChange={ handleChange }
           />
         </label>
-        <label htmlFor="attr1">
+        <label htmlFor="cardAttr1">
           Attr1
           <input
-            id="attr1"
+            id="cardAttr1"
             type="number"
             data-testid="attr1-input"
-            name="attr1"
-            value={ attr1 }
+            name="cardAttr1"
+            value={ cardAttr1 }
             onChange={ handleChange }
           />
         </label>
-        <label htmlFor="attr2">
+        <label htmlFor="cardAttr2">
           Attr2
           <input
-            id="attr2"
+            id="cardAttr2"
             type="number"
             data-testid="attr2-input"
-            name="attr2"
-            value={ attr2 }
+            name="cardAttr2"
+            value={ cardAttr2 }
             onChange={ handleChange }
           />
         </label>
-        <label htmlFor="attr3">
+        <label htmlFor="cardAttr3">
           Attr3
           <input
-            id="attr3"
+            id="cardAttr3"
             type="number"
             data-testid="attr3-input"
-            name="attr3"
-            value={ attr3 }
+            name="cardAttr3"
+            value={ cardAttr3 }
             onChange={ handleChange }
           />
         </label>
@@ -129,9 +129,9 @@ Form.propTypes = {
   cardName: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
   cardDescription: PropTypes.string.isRequired,
-  attr1: PropTypes.string.isRequired,
-  attr2: PropTypes.string.isRequired,
-  attr3: PropTypes.string.isRequired,
+  cardAttr1: PropTypes.string.isRequired,
+  cardAttr2: PropTypes.string.isRequired,
+  cardAttr3: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   rare: PropTypes.string.isRequired,
   agree: PropTypes.bool.isRequired,

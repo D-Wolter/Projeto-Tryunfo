@@ -7,9 +7,9 @@ class App extends React.Component {
     this.state = {
       cardName: '',
       cardDescription: '',
-      attr1: '0',
-      attr2: '0',
-      attr3: '0',
+      cardAttr1: '0',
+      cardAttr2: '0',
+      cardAttr3: '0',
       image: '',
       rare: 'normal',
       agree: false,
@@ -35,9 +35,9 @@ class App extends React.Component {
       previewOn: true,
       cardName: '',
       cardDescription: '',
-      attr1: '0',
-      attr2: '0',
-      attr3: '0',
+      cardAttr1: '0',
+      cardAttr2: '0',
+      cardAttr3: '0',
       image: '',
       rare: 'normal',
     }));
@@ -47,9 +47,9 @@ class App extends React.Component {
     const {
       cardName,
       cardDescription,
-      attr1,
-      attr2,
-      attr3,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
       image,
       rare,
       agree,
@@ -60,9 +60,9 @@ class App extends React.Component {
         handleChange={ this.handleChange }
         cardName={ cardName }
         cardDescription={ cardDescription }
-        attr1={ attr1 }
-        attr2={ attr2 }
-        attr3={ attr3 }
+        cardAttr1={ cardAttr1 }
+        cardAttr2={ cardAttr2 }
+        cardAttr3={ cardAttr3 }
         image={ image }
         rare={ rare }
         agree={ agree }
