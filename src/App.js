@@ -7,14 +7,15 @@ class App extends React.Component {
     this.state = {
       name: '',
       description: '',
-      attr1: '',
-      attr2: '',
-      attr3: '',
+      attr1: '0',
+      attr2: '0',
+      attr3: '0',
       image: '',
-      rare: '',
+      rare: 'normal',
       agree: false,
       data: [],
       previewOn: false,
+      isDisabled: true,
     };
   }
 
@@ -32,6 +33,13 @@ class App extends React.Component {
     this.setState((prevState) => ({
       data: [...prevState.data, objetoInfo],
       previewOn: true,
+      name: '',
+      description: '',
+      attr1: '0',
+      attr2: '0',
+      attr3: '0',
+      image: '',
+      rare: 'normal',
     }));
   };
 
@@ -45,7 +53,8 @@ class App extends React.Component {
       image,
       rare,
       agree,
-      previewOn } = this.state;
+      previewOn,
+      isDisabled } = this.state;
     return (
       <Form
         handleChange={ this.handleChange }
@@ -59,6 +68,7 @@ class App extends React.Component {
         agree={ agree }
         previewOn={ previewOn }
         saveClick={ this.saveClick }
+        isDisabled={ isDisabled }
       />
     );
   }

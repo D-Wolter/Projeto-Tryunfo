@@ -86,7 +86,13 @@ export default class Form extends Component {
           />
         </label>
         <label htmlFor="rare">
-          <select name="rare" id="rare" value={ rare } onChange={ handleChange }>
+          <select
+            name="rare"
+            id="rare"
+            value={ rare }
+            onChange={ handleChange }
+            data-testid="rare-input"
+          >
             <option value="normal">normal</option>
             <option value="raro">raro</option>
             <option value="muito raro">muito raro</option>
