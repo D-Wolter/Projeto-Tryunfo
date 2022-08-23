@@ -10,16 +10,16 @@ class App extends React.Component {
       cardAttr1: '0',
       cardAttr2: '0',
       cardAttr3: '0',
-      image: '',
-      rare: 'normal',
-      agree: false,
+      cardImage: '',
+      cardRare: 'normal',
+      cardTrunfo: false,
       data: [],
       previewOn: false,
-      isDisabled: true,
+      isSaveButtonDisabled: true,
     };
   }
 
-  handleChange = ({ target }) => {
+  onInputChange = ({ target }) => {
     const { name, type } = target;
     const value = type === 'checkbox' ? target.checked : target.value;
     this.setState({
@@ -29,7 +29,7 @@ class App extends React.Component {
     });
   };
 
-  saveClick = (objetoInfo) => {
+  onSaveButtonClick = (objetoInfo) => {
     this.setState((prevState) => ({
       data: [...prevState.data, objetoInfo],
       previewOn: true,
@@ -38,8 +38,10 @@ class App extends React.Component {
       cardAttr1: '0',
       cardAttr2: '0',
       cardAttr3: '0',
-      image: '',
-      rare: 'normal',
+      cardImage: '',
+      cardRare: 'normal',
+      isSaveButtonDisabled: true,
+      hasTrunfo: false,
     }));
   };
 
@@ -50,25 +52,27 @@ class App extends React.Component {
       cardAttr1,
       cardAttr2,
       cardAttr3,
-      image,
-      rare,
-      agree,
+      cardImage,
+      cardRare,
+      cardTrunfo,
       previewOn,
-      isDisabled } = this.state;
+      isSaveButtonDisabled,
+      hasTrunfo } = this.state;
     return (
       <Form
-        handleChange={ this.handleChange }
+        onInputChange={ this.onInputChange }
         cardName={ cardName }
         cardDescription={ cardDescription }
         cardAttr1={ cardAttr1 }
         cardAttr2={ cardAttr2 }
         cardAttr3={ cardAttr3 }
-        image={ image }
-        rare={ rare }
-        agree={ agree }
+        cardImage={ cardImage }
+        cardRare={ cardRare }
+        cardTrunfo={ cardTrunfo }
         previewOn={ previewOn }
-        saveClick={ this.saveClick }
-        isDisabled={ isDisabled }
+        onSaveButtonClick={ this.onSaveButtonClick }
+        isSaveButtonDisabled={ isSaveButtonDisabled }
+        hasTrunfo={ hasTrunfo }
       />
     );
   }
