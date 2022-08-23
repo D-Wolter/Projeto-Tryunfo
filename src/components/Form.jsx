@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default class Form extends Component {
   render() {
-    const { name, handleChange, description, attr1 } = this.props;
+    const { name, handleChange, description, attr1, attr2, attr3 } = this.props;
 
     return (
       <form>
@@ -41,6 +41,28 @@ export default class Form extends Component {
             onChange={ handleChange }
           />
         </label>
+        <label htmlFor="attr2">
+          Attr2
+          <input
+            id="attr2"
+            type="number"
+            data-testid="attr2-input"
+            name="attr2"
+            value={ attr2 }
+            onChange={ handleChange }
+          />
+        </label>
+        <label htmlFor="attr3">
+          Attr3
+          <input
+            id="attr3"
+            type="number"
+            data-testid="attr3-input"
+            name="attr3"
+            value={ attr3 }
+            onChange={ handleChange }
+          />
+        </label>
       </form>
     );
   }
@@ -51,4 +73,6 @@ Form.propTypes = {
   handleChange: PropTypes.func.isRequired,
   description: PropTypes.string.isRequired,
   attr1: PropTypes.string.isRequired,
+  attr2: PropTypes.string.isRequired,
+  attr3: PropTypes.string.isRequired,
 };

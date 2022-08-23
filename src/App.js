@@ -8,6 +8,8 @@ class App extends React.Component {
       name: '',
       description: '',
       attr1: '',
+      attr2: '',
+      attr3: '',
     };
   }
 
@@ -22,13 +24,15 @@ class App extends React.Component {
   };
 
   render() {
-    const { name, description, attr1 } = this.state;
+    const { name, description, attr1, attr2, attr3 } = this.state;
     return (
       <Form
         handleChange={ this.handleChange }
         name={ name }
         description={ description }
         attr1={ attr1 }
+        attr2={ attr2 }
+        attr3={ attr3 }
       />
     );
   }
