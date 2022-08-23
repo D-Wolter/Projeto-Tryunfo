@@ -12,6 +12,7 @@ class App extends React.Component {
       attr3: '',
       image: '',
       rare: '',
+      agree: false,
     };
   }
 
@@ -26,7 +27,7 @@ class App extends React.Component {
   };
 
   render() {
-    const { name, description, attr1, attr2, attr3, image, rare } = this.state;
+    const { name, description, attr1, attr2, attr3, image, rare, agree } = this.state;
     return (
       <Form
         handleChange={ this.handleChange }
@@ -37,6 +38,7 @@ class App extends React.Component {
         attr3={ attr3 }
         image={ image }
         rare={ rare }
+        agree={ agree }
       />
     );
   }

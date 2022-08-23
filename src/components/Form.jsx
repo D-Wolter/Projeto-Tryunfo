@@ -4,7 +4,15 @@ import PropTypes from 'prop-types';
 export default class Form extends Component {
   render() {
     const
-      { name, handleChange, description, attr1, attr2, attr3, image, rare } = this.props;
+      { name,
+        handleChange,
+        description,
+        attr1,
+        attr2,
+        attr3,
+        image,
+        rare,
+        agree } = this.props;
 
     return (
       <form>
@@ -82,6 +90,17 @@ export default class Form extends Component {
             <option value="muito raro">muito raro</option>
           </select>
         </label>
+        <label htmlFor="agree">
+          Super Trybe Trunfo
+          <input
+            data-testid="trunfo-input"
+            type="checkbox"
+            name="agree"
+            id="agree"
+            value={ agree }
+            onChange={ handleChange }
+          />
+        </label>
       </form>
     );
   }
@@ -96,4 +115,5 @@ Form.propTypes = {
   attr3: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   rare: PropTypes.string.isRequired,
+  agree: PropTypes.bool.isRequired,
 };
