@@ -6,6 +6,7 @@ class App extends React.Component {
     super();
     this.state = {
       name: '',
+      description: '',
     };
   }
 
@@ -20,11 +21,12 @@ class App extends React.Component {
   };
 
   render() {
-    const { name } = this.state;
+    const { name, description } = this.state;
     return (
       <Form
         handleChange={ this.handleChange }
         name={ name }
+        description={ description }
       />
     );
   }
