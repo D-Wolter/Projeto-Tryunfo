@@ -33,6 +33,7 @@ export default class Form extends Component {
         <label htmlFor="description">
           Descrição
           <textarea
+            data-testid="description-input"
             name="description"
             id="description"
             cols="30"
