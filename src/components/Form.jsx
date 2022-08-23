@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default class Form extends Component {
   render() {
-    const { name, handleChange, description, attr1, attr2, attr3 } = this.props;
+    const { name, handleChange, description, attr1, attr2, attr3, image } = this.props;
 
     return (
       <form>
@@ -63,6 +63,17 @@ export default class Form extends Component {
             onChange={ handleChange }
           />
         </label>
+        <label htmlFor="image">
+          Imagem
+          <input
+            type="text"
+            id="image"
+            name="image"
+            value={ image }
+            data-testid="image-input"
+            onChange={ handleChange }
+          />
+        </label>
       </form>
     );
   }
@@ -75,4 +86,5 @@ Form.propTypes = {
   attr1: PropTypes.string.isRequired,
   attr2: PropTypes.string.isRequired,
   attr3: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
 };

@@ -10,6 +10,7 @@ class App extends React.Component {
       attr1: '',
       attr2: '',
       attr3: '',
+      image: '',
     };
   }
 
@@ -24,7 +25,7 @@ class App extends React.Component {
   };
 
   render() {
-    const { name, description, attr1, attr2, attr3 } = this.state;
+    const { name, description, attr1, attr2, attr3, image } = this.state;
     return (
       <Form
         handleChange={ this.handleChange }
@@ -33,6 +34,7 @@ class App extends React.Component {
         attr1={ attr1 }
         attr2={ attr2 }
         attr3={ attr3 }
+        image={ image }
       />
     );
   }
