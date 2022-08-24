@@ -27,9 +27,6 @@ class App extends React.Component {
     this.setState({
       [name]: value,
     }, () => {
-      const maxAtrr = 91;
-      const minAtrr = 0;
-      const soma = 211;
       const {
         cardName,
         cardImage,
@@ -37,6 +34,10 @@ class App extends React.Component {
         cardAttr1,
         cardAttr2,
         cardAttr3 } = this.state;
+      const maxAtrr = 91;
+      const minAtrr = -1;
+      const limite = 211;
+      const soma = (Number(cardAttr1) + Number(cardAttr2) + Number(cardAttr3));
       if (
         cardName.length > 0
         && cardImage.length > 0
@@ -47,7 +48,7 @@ class App extends React.Component {
         && cardAttr1 > minAtrr
         && cardAttr2 > minAtrr
         && cardAttr3 > minAtrr
-        && cardAttr1 + cardAttr2 + cardAttr3 > soma) {
+        && soma < limite) {
         this.setState({
           isSaveButtonDisabled: false,
         });
