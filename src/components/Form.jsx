@@ -116,7 +116,17 @@ export default class Form extends Component {
           disabled={ isSaveButtonDisabled }
           onClick={
             () => onSaveButtonClick({
-              cardName, description, attr1, attr2, attr3, image, rare })
+              cardName,
+              onInputChange,
+              cardDescription,
+              cardAttr1,
+              cardAttr2,
+              cardAttr3,
+              cardImage,
+              cardRare,
+              cardTrunfo,
+              onSaveButtonClick,
+              isSaveButtonDisabled })
           }
         >
           Salvar
