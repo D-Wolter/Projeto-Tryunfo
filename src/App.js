@@ -16,6 +16,7 @@ class App extends React.Component {
       cardTrunfo: false,
       previewOn: false,
       isSaveButtonDisabled: true,
+      data: [],
     };
   }
 
@@ -27,7 +28,7 @@ class App extends React.Component {
       [name]: value,
     }, () => {
       const maxAtrr = 91;
-      const minAtrr = -1;
+      const minAtrr = 0;
       const soma = 211;
       const {
         cardName,
@@ -46,7 +47,7 @@ class App extends React.Component {
         && cardAttr1 > minAtrr
         && cardAttr2 > minAtrr
         && cardAttr3 > minAtrr
-        && (cardAttr1 + cardAttr2 + cardAttr3) > soma) {
+        && cardAttr1 + cardAttr2 + cardAttr3 > soma) {
         this.setState({
           isSaveButtonDisabled: false,
         });
@@ -58,8 +59,8 @@ class App extends React.Component {
     });
   };
 
-  onSaveButtonClick = () => {
-    this.setState(() => ({
+  onSaveButtonClick = (objetoInfo) => {
+    this.setState((prevState) => ({
       cardName: '',
       cardDescription: '',
       cardAttr1: '0',
@@ -70,6 +71,7 @@ class App extends React.Component {
       isSaveButtonDisabled: true,
       hasTrunfo: false,
       cardTrunfo: true,
+      data: [...prevState.data, objetoInfo],
     }));
   };
 

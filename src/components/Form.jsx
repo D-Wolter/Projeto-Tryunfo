@@ -117,7 +117,6 @@ export default class Form extends Component {
           onClick={
             () => onSaveButtonClick({
               cardName,
-              onInputChange,
               cardDescription,
               cardAttr1,
               cardAttr2,
@@ -125,8 +124,7 @@ export default class Form extends Component {
               cardImage,
               cardRare,
               cardTrunfo,
-              onSaveButtonClick,
-              isSaveButtonDisabled })
+            })
           }
         >
           Salvar
