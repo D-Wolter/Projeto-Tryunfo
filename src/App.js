@@ -17,6 +17,7 @@ class App extends React.Component {
       previewOn: false,
       isSaveButtonDisabled: true,
       data: [],
+      hasTrunfo: true,
     };
   }
 
