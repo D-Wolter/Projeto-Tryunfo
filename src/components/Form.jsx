@@ -109,7 +109,6 @@ export default class Form extends Component {
             id="cardTrunfo"
             checked={ cardTrunfo }
             onChange={ onInputChange }
-            disabled={ hasTrunfo }
           />
           Super Trybe Trunfo
         </label>
