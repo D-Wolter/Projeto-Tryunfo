@@ -15,9 +15,9 @@ class App extends React.Component {
       cardRare: 'normal',
       cardTrunfo: false,
       previewOn: false,
-      isSaveButtonDisabled: true,
+      isSaveButtonDisabled: false,
       data: [],
-      hasTrunfo: true,
+      hasTrunfo: false,
     };
   }
 
@@ -61,8 +61,13 @@ class App extends React.Component {
     });
   };
 
+  checkSuper = (cardTrunfo) => (cardTrunfo === true);
+
   onSaveButtonClick = (objetoInfo) => {
+    const { cardTrunfo } = this.state;
     this.setState((prevState) => ({
+      data: [...prevState.data, objetoInfo],
+      hasTrunfo: this.checkSuper(cardTrunfo),
       cardName: '',
       cardDescription: '',
       cardAttr1: '0',
@@ -71,9 +76,7 @@ class App extends React.Component {
       cardImage: '',
       cardRare: 'normal',
       isSaveButtonDisabled: true,
-      hasTrunfo: false,
-      cardTrunfo: true,
-      data: [...prevState.data, objetoInfo],
+      cardTrunfo: false,
     }));
   };
 
@@ -89,7 +92,8 @@ class App extends React.Component {
       cardTrunfo,
       previewOn,
       isSaveButtonDisabled,
-      hasTrunfo } = this.state;
+      hasTrunfo,
+      data } = this.state;
     return (
       <>
         <Form
@@ -116,7 +120,19 @@ class App extends React.Component {
           cardImage={ cardImage }
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }
+
         />
+        { data.map((e, index) => (<Card
+          key={ index }
+          cardName={ e.cardName }
+          cardDescription={ e.cardDescription }
+          cardAttr1={ e.cardAttr1 }
+          cardAttr2={ e.cardAttr2 }
+          cardAttr3={ e.cardAttr3 }
+          cardImage={ e.cardImage }
+          cardRare={ e.cardRare }
+          cardTrunfo={ e.cardTrunfo }
+        />))}
       </>
     );
   }
