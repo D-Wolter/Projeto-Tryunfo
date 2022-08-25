@@ -15,7 +15,7 @@ class App extends React.Component {
       cardRare: 'normal',
       cardTrunfo: false,
       previewOn: false,
-      isSaveButtonDisabled: false,
+      isSaveButtonDisabled: true,
       data: [],
       hasTrunfo: false,
     };
