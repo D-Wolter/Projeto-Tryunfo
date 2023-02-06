@@ -1,4 +1,4 @@
-# Projeto TryUnfo
+# Projeto Tryunfo
 
 Tryunfo é uma aplicção React que simulará um jogo de Super Trunfo, onde será possível criar suas próprias cartas.
 
