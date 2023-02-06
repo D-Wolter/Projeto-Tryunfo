@@ -22,9 +22,9 @@ Neste projeto, verificamos que você é capaz de:
 # Instruções para rodar o Projeto:
 
 1. Clone o repositório
-  * `git@github.com:ItaloAraujodev/Projeto-TryUnfo.git`
+  * `git@github.com:D-Wolter/Projeto-Tryunfo.git`
   * Entre na pasta do repositório que você acabou de clonar:
-    * `cd TryUnfo`
+    * `cd sd-024-a-project-tryunfo`
 
 2. Insatle as dependências
     * `npm install` (aguarde rodar e ignore os erros)
