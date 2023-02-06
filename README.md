@@ -1,13 +1,46 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Projeto TryUnfo
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+Tryunfo é uma aplicção React que simulará um jogo de Super Trunfo, onde será possível criar suas próprias cartas.
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# Habilidades
+Neste projeto, verificamos que você é capaz de:
+
+* Ler o estado de um componente e usá-lo para alterar o que exibimos no browser
+
+* Inicializar um componente, dando a ele um estado pré-definido
+
+* Atualizar o estado de um componente
+
+* Capturar eventos utilizando a sintaxe do React
+
+* Criar formulários utilizando sintaxe JSX com as tags: input, textarea, select, form, checkbox
+
+* Transmitir informações de componentes filhos para componentes pais via callbacks.
+
+---
+
+# Instruções para rodar o Projeto:
+
+1. Clone o repositório
+  * `git@github.com:ItaloAraujodev/Projeto-TryUnfo.git`
+  * Entre na pasta do repositório que você acabou de clonar:
+    * `cd TryUnfo`
+
+2. Insatle as dependências
+    * `npm install` (aguarde rodar e ignore os erros)
+
+3. Inicialize o projeto
+    * `npm start` (uma nova página deve abrir no seu navegador com o projeto)
+
+---
+
+### Descrição
+
+Neste projeto foi desenvolvido um jogo no estilo Super Trunfo! Ao utilizar essa aplicação uma pessoa usuária deverá ser capaz de:
+
+* Criar um baralho com o tema livre;
+
+* Adicionar e remover uma carta do baralho;
+
+* Visualizar todas as cartas que foram adicionadas ao baralho;
+
